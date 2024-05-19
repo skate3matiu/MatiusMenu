@@ -60,6 +60,8 @@ if /i "%choice%"=="J" goto openFileJ
 if /i "%choice%"=="K" goto openFileK
 if /i "%choice%"=="L" goto openFileL
 
+goto invalidChoice
+
 :openFile1
 start "" "C:\Path\To\Exe.exe"
 goto menu
@@ -154,4 +156,9 @@ goto menu
 
 :openFileL
 start "" "C:\Path\To\Exe.exe"
+goto menu
+
+:invalidChoice
+echo %choice% not found
+pause
 goto menu
